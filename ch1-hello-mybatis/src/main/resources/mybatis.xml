@@ -3,6 +3,12 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
+<!--    控制mybatis全局行为的-->
+    <settings>
+<!--        设置mybatis输出日志-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
     <!--        环境配置：数据库的链接信息-->
     <environments default="mydev">
 <!--数据库信息的配置

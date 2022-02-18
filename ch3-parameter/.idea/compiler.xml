@@ -7,14 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ch2-proxy-dao" />
-        <module name="ch1-hello-mybatis" />
-        <module name="ch3-parameter" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ch1-hello-mybatis" target="1.8" />
       <module name="ch2-proxy-dao" target="1.8" />
-      <module name="ch3-parameter" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

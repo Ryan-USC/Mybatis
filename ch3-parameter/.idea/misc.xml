@@ -4,8 +4,6 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/../ch2-proxy-dao/pom.xml" />
-        <option value="$PROJECT_DIR$/../ch3-parameter/pom.xml" />
       </list>
     </option>
   </component>

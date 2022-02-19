@@ -4,5 +4,7 @@
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../ch2-proxy-dao/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../ch3-parameter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ch4-return-result/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ch5-dynamic-sql/src/main/java" charset="UTF-8" />
   </component>
 </project>

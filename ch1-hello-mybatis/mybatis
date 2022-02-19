@@ -116,7 +116,72 @@ mybatis提供了哪些功能：
         4、$有sql注入风险，缺乏安全性
         5、$：可以替换表名或者列名
 
+    5.mybatis的输出结果
+      mybatis执行了sql语句，得到了java对象
 
+      1）resultType结果类型，指sql语句执行完毕后，数据转为java对象。java类型是任意的。
+        resultType结果类型的值：1、全限定名称（***） 2、类型的别名
+        处理方式：
+          （1）mybatis执行sql语句，然后mybatis调用类的无参数构造方法，创建对象。
+          （2）mybatis把ResultSet指定列值赋值给同名属性。
+      2）定义自定义类型的别名
+        1）在mybatis主配置文件中定义，使用<typeAlias>定义别名
+        2）可以在resultType中使用自定义别名
+
+      3）resultMap：结果映射，指定列名和java对象的属性对应关系
+        （1）自定义列值赋值给哪个属性
+        （2）当列名和属性名不一样时，要使用
+
+        resultMap和resultType不要一起用
+
+第四章动态sql
+  动态sql：sql的内容是变化的，可以根据条件获取到不同的sql语句。
+            主要是where部分发生变化。
+
+  动态sql的实现，使用的是mybatis提供的标签，<if>, <where>, <foreach>
+
+  1)<if>是判断条件
+    语法<if test="判断java对象的属性值">
+            部分sql语句
+        </if>
+  2)<where>用来包含多个<if>的，当多个if有一个成立的，<where>会自动增加一个where关键字，
+    并去掉if多余的and和or
+
+  3)<foreach>循环java中的数组，list集合的，主要用在sql的in语句中。
+    学生id是 1001，1002，1003的三个学生。
+
+    select * from student id in (1001,1002,1003)
+
+    <foreach collection="" item="" open="" close="" separator="">
+    </foreach>
+
+    collection: 表示接口中的方法参数的类型，如果数组使用的是array，如果是list集合使用的list
+    item：自定义的，表示数组和集合成员的变量
+    open：循环开始的是字符
+    close：循环结束时的字符
+    separator：集合成员之间的分隔符
+
+  4）sql代码片段，就是复用一些语法
+    步骤：
+    1.先定义 <sql id=""> sql语句，表名，字段等 </sql>
+    2.再使用，<include refid="id"/>
+
+第五章
+    1.数据库的属性配置文件：把数据库连接信息放到一个单独的文件中。和mybatis主配置文件分开。
+    目的是便于修改，保存，处理多个数据库的信息。
+
+        1）在resource目录中定义一个属性配置文件，xxxx.properties
+            在属性配置文件中，定义数据，格式是key=value
+            key：一般使用. 做多级目录
+
+        2）在mybatis的主配置文件中，使用<propertied>指定文件的位置
+    2.mapper文件，使用package指定路径
+        name：xml文件(mapper文件）所在的包名
+        使用package的要求：
+        1.mapper文件名称需要和接口名称一样，区分大小写一样
+        2.mapper文件和dao接口需要在同一目录
+第六章：PageHelper
+    PageHelper做数据分页的
 
 
 

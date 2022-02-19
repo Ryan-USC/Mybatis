@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/ch1-hello-mybatis.iml" filepath="$PROJECT_DIR$/ch1-hello-mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/../ch2-proxy-dao/ch2-proxy-dao.iml" filepath="$PROJECT_DIR$/../ch2-proxy-dao/ch2-proxy-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/../ch3-parameter/ch3-parameter.iml" filepath="$PROJECT_DIR$/../ch3-parameter/ch3-parameter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ch4-return-result/ch4-return-result.iml" filepath="$PROJECT_DIR$/../ch4-return-result/ch4-return-result.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ch5-dynamic-sql/ch5-dynamic-sql.iml" filepath="$PROJECT_DIR$/../ch5-dynamic-sql/ch5-dynamic-sql.iml" />
     </modules>
   </component>
 </project>
